@@ -1,0 +1,29 @@
+{
+  "name": "panorama",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://nsharma1396.github.io/panorama",
+  "devDependencies": {
+    "gh-pages": "^1.0.0",
+    "react-scripts": "1.0.13"
+  },
+  "dependencies": {
+    "aframe": "^0.6.1",
+    "aframe-layout-component": "^4.2.0",
+    "aframe-react": "^4.3.0",
+    "aframe-text-component": "^0.4.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.13",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d build"
+  }
+}
