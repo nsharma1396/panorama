@@ -7,6 +7,7 @@
     "gh-pages": "^1.0.0",
     "react-scripts": "1.0.13"
   },
+  "proxy": "http://localhost:3000/",
   "dependencies": {
     "aframe": "^0.6.1",
     "aframe-layout-component": "^4.2.0",

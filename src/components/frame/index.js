@@ -30,7 +30,7 @@ class Fetch extends Component {
           {data.map((elem,index)=> {
           if(image===index)
             return(        
-              <Entity key={index} primitive="a-sky" position="2 2 -3"  src={data[image].pano}/>
+              <Entity key={index} primitive="a-sky" position="2 2 -3"  src={"https://raw.githubusercontent.com/SiDevesh/PanoGallery/gh-pages/VR/"+image+".jpg"}/>
             );
           else
             return null;
@@ -43,12 +43,12 @@ class Fetch extends Component {
                 <Entity key={ind}
                   primitive="a-plane"
                   events= {
-                    {
-                      click: () => {this.handleClick(ind)}
-                    }
-                  }
-                  src={elem.pano}
-                  sound="on: click; src: #click-sound"
+                            {
+                              click: () => {this.handleClick(ind)}
+                            }
+                          }
+                  sound="on: click; src: #click-sound"        
+                  src={"https://raw.githubusercontent.com/SiDevesh/PanoGallery/gh-pages/VR/"+ind+".jpg"}
                   position={{x:-2+1.5*ind ,y:2.5, z:-3.5}}/>
               );
             }
@@ -61,13 +61,26 @@ class Fetch extends Component {
                             click: () => {this.handleClick(ind)}
                           }
                         }
-                src={elem.pano}
-                sound="on: click; src: #click-sound"
-                position={{x:-2+1.5*ind ,y:2, z:-4}}/>
+                sound="on: click; src: #click-sound"        
+                src={"https://raw.githubusercontent.com/SiDevesh/PanoGallery/gh-pages/VR/"+ind+".jpg"}
+                position={{x:-2+1.5*ind ,y:2, z:-4}}
+                />
               );
             }
           })}
-        <Entity text={{value:'Picture '+(image+1),width:5,color:'#0ff'}} position="2 3 -2"></Entity>          
+          {data.map((elem,ind)=>{
+            if(image===ind) {
+              return (
+                <Entity
+                  text={{value:elem.name,width:5,color:"#0ff"}}
+                  position="2.5 3 -2"
+                />
+            )}
+            else {
+              return null;
+            }
+          })}
+        <Entity text={{value:'Picture '+(image+1)+": ",width:5,color:'#0ff'}} position="1.5 3 -2"></Entity>          
         </Entity>
           <Entity primitive="a-camera">
             <Entity primitive="a-cursor" color="#fff"/>
