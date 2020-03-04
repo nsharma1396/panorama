@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import './App.css';
-import {URL} from './constants'
-import Frame from './components/frame/'
-import { itemsFetchData } from './actions/';
-
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import "./App.css";
+import { URL } from "./constants";
+import Frame from "./components/frame/";
+import { itemsFetchData } from "./actions/";
 
 class App extends Component {
-
   componentDidMount() {
     this.props.fetchData(URL);
   }
@@ -21,14 +19,13 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-  };
+const mapStateToProps = state => {
+  return {};
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    fetchData: (url) => dispatch(itemsFetchData(url))
+    fetchData: url => dispatch(itemsFetchData(url))
   };
 };
 
