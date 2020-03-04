@@ -11,7 +11,7 @@ class Fetch extends Component {
   };
 
   render() {
-    const { data, status, image } = this.props;
+    const { data, status, currentImageIndex } = this.props;
     if (status === "loading")
       return (
         <h1 style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -31,7 +31,7 @@ class Fetch extends Component {
             <audio id="click-sound" crossOrigin="anonymous" src={playSound}></audio>
           </a-assets>
           {data.map((elem, index) => {
-            if (image === index)
+            if (currentImageIndex === index)
               return (
                 <Entity
                   key={index}
@@ -39,7 +39,9 @@ class Fetch extends Component {
                   position="2 2 -3"
                   src={
                     "https://raw.githubusercontent.com/SiDevesh/PanoGallery/gh-pages/VR/" +
-                    image +
+                    currentImageIndex +
+                    // "https://nsharma1396.github.io/data-serve/" +
+                    // data[currentImageIndex].file +
                     ".jpg"
                   }
                 />
@@ -48,7 +50,7 @@ class Fetch extends Component {
           })}
           <Entity layout={{ type: "line", margin: 1.5 }}>
             {data.map((elem, ind) => {
-              if (image === ind) {
+              if (currentImageIndex === ind) {
                 return (
                   <Entity
                     key={ind}
@@ -89,7 +91,7 @@ class Fetch extends Component {
               }
             })}
             {data.map((elem, ind) => {
-              if (image === ind) {
+              if (currentImageIndex === ind) {
                 return (
                   <Entity
                     text={{ value: elem.name, width: 5, color: "#0ff" }}
@@ -101,7 +103,7 @@ class Fetch extends Component {
               }
             })}
             <Entity
-              text={{ value: "Picture " + (image + 1) + ": ", width: 5, color: "#0ff" }}
+              text={{ value: "Picture " + (currentImageIndex + 1) + ": ", width: 5, color: "#0ff" }}
               position="1.5 3 -2"
             ></Entity>
           </Entity>
@@ -117,7 +119,7 @@ const mapStateToProps = state => {
   return {
     data: state.data,
     status: state.status,
-    image: state.current
+    currentImageIndex: state.current
   };
 };
 

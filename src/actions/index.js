@@ -24,7 +24,10 @@ export function itemsFetchData(url) {
     fetch(url)
       .then(response => response.json())
       .then(items => dispatch(itemsFetchDataSuccess(items)))
-      .catch(() => dispatch(itemsHasErrored()));
+      .catch(error => {
+        console.error(error);
+        dispatch(itemsHasErrored());
+      });
   };
 }
 
