@@ -9,7 +9,7 @@
   },
   "proxy": "http://localhost:3000/",
   "dependencies": {
-    "aframe": "^0.6.1",
+    "aframe": "^1.0.4",
     "aframe-layout-component": "^4.3.1",
     "aframe-react": "^4.3.0",
     "aframe-text-component": "^0.4.2",
@@ -17,7 +17,7 @@
     "react-dom": "^15.6.2",
     "react-redux": "^5.1.2",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.2.0",
+    "redux-thunk": "^2.3.0",
     "thunk": "0.0.1"
   },
   "scripts": {
