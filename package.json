@@ -9,7 +9,7 @@
   },
   "proxy": "http://localhost:3000/",
   "dependencies": {
-    "aframe": "^0.6.1",
+    "aframe": "^1.0.4",
     "aframe-layout-component": "^4.3.1",
     "aframe-react": "^4.3.0",
     "aframe-text-component": "^0.4.2",
