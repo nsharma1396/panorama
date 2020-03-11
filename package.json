@@ -11,11 +11,11 @@
   "dependencies": {
     "aframe": "^1.0.4",
     "aframe-layout-component": "^4.3.1",
-    "aframe-react": "^4.3.0",
+    "aframe-react": "^4.4.0",
     "aframe-text-component": "^0.4.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-redux": "^5.1.2",
+    "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "thunk": "0.0.1"
