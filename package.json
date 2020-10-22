@@ -5,7 +5,7 @@
   "homepage": "https://nsharma1396.github.io/panorama",
   "devDependencies": {
     "gh-pages": "^2.2.0",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.4"
   },
   "proxy": "http://localhost:3000/",
   "dependencies": {
